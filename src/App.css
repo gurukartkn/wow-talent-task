@@ -28,6 +28,7 @@ li:hover {
   min-height: 100vh;
   display: flex;
   color: white;
+  max-width: 100vw;
 }
 
 .mobile-nav {
@@ -37,7 +38,6 @@ li:hover {
 .sidebar {
   background-color: #283046;
   box-shadow: 0 0 1px 2px #283046;
-  width: 15%;
   height: max-content;
   padding: 20px;
   padding-bottom: 50px;
@@ -46,6 +46,7 @@ li:hover {
 
 .sidebar-header {
   display: flex;
+  min-width: 15vw;
   padding: 10px;
   align-items: center;
   gap: 15px;
@@ -65,7 +66,7 @@ li:hover {
 
 .right-side {
   margin: 20px;
-  width: 85%;
+  max-width: 75vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -237,7 +238,7 @@ td {
   }
 
   .right-side {
-    width: 100%;
+    max-width: 100vw;
     margin: 5px;
   }
 
