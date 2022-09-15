@@ -26,7 +26,7 @@ import {
 } from "react-icons/ri";
 
 function App() {
-  const [dashboard, setDashboard] = useState({});
+  // const [dashboard, setDashboard] = useState({});
   const [dashboardData, setDashboardData] = useState([]);
   const [statistics, setStatistics] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,13 +38,13 @@ function App() {
   };
 
   useEffect(() => {
-    fetch(
-      `https://admindevapi.wowtalent.live/api/admin/dashboard/installstatasticlist?fromdate=${fromDate}&todate=${toDate}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setDashboard(data.data);
-      });
+    // fetch(
+    //   `https://admindevapi.wowtalent.live/api/admin/dashboard/installstatasticlist?fromdate=${fromDate}&todate=${toDate}`
+    // )
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     setDashboard(data.data);
+    //   });
 
     fetch(
       `https://admindevapi.wowtalent.live/api/admin/dashboard/installstatasticlist?fromdate=${fromDate}&todate=${toDate}`
