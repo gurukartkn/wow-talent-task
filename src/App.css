@@ -1,38 +1,257 @@
-.App {
-  text-align: center;
+ul {
+  border: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.active-li {
+  background-color: #645cce;
+  box-shadow: 0 0 6px 3px #6960e2;
 }
 
-.App-header {
-  background-color: #282c34;
+li:hover {
+  background-color: #645cce;
+  box-shadow: 0 0 6px 3px #6960e2;
+  cursor: pointer;
+}
+
+.bg {
+  background-color: #161d30;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.mobile-nav {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sidebar {
+  background-color: #283046;
+  box-shadow: 0 0 1px 2px #283046;
+  width: 15%;
+  height: max-content;
+  padding: 20px;
+  padding-bottom: 50px;
+  border-bottom-right-radius: 8px;
+}
+
+.sidebar-header {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 15px;
+  color: #645cce;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.right-side {
+  margin: 20px;
+  width: 85%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stats-container {
+  background-color: #283046;
+  box-shadow: 0 0 1px 2px #283046;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.stats {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #161d30;
+}
+
+.results-container {
+  background-color: #283046;
+  box-shadow: 0 0 1px 2px #283046;
+  height: max-content;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.results-header {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px 10px 20px;
+}
+
+.table-container {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.results-table {
+  min-width: 1024px;
+  width: 100%;
+}
+
+tbody {
+  table-layout: fixed;
+  display: table;
+  width: 100%;
+}
+
+thead {
+  table-layout: fixed;
+  background-color: #161d30;
+  border-radius: 5px;
+  display: table;
+  width: 100%;
+}
+
+th {
+  padding: 10px;
+  color: white;
+}
+
+td {
+  text-align: center;
+  margin-top: -5px;
+}
+
+.date {
+  text-align: left;
+}
+
+.platform {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.platform-text {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.results-footer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.pagination {
+  background-color: #161d30;
+  padding: 0 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.pagination-page {
+  padding: 0 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination-page:hover {
+  background-color: #645cce;
+  box-shadow: 0 0 1px 2px #645cce;
+  cursor: pointer;
+}
+
+.active-page {
+  background-color: #645cce;
+  box-shadow: 0 0 1px 2px #645cce;
+}
+
+@media screen and (max-width: 1023px) {
+  .bg {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mobile-nav {
+    display: block;
+    position: relative;
+  }
+
+  .ham-menu {
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+
+  .mobile-nav-header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 15px;
+    color: #645cce;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .right-side {
+    width: 100%;
+    margin: 5px;
+  }
+
+  .results-header {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .date-container {
+    width: 150px;
+  }
+
+  .results-footer {
+    justify-content: center;
   }
 }
